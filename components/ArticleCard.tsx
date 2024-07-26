@@ -61,7 +61,7 @@ const ArticleCard = (
                     </div>
                 </div>
             </Link>
-            <Link className='lg:w-1/3 w-full  bg-[#29303C] text-white rounded-md flex flex-col hover:shadow-md transition duration-200 ease-in-out cursor-pointer hover:scale-[1.02]'
+            <Link className='lg:hidden w-full  bg-[#29303C] text-white rounded-md flex flex-col hover:shadow-md transition duration-200 ease-in-out cursor-pointer hover:scale-[1.02]'
                 href={`/article/${article.id}`}
             >
                 <div className='flex items-center justify-center rounded-sm'>

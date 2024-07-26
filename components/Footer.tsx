@@ -15,8 +15,8 @@ const Footer = () => {
             url: '/contact'
         },
         {
-            title: 'Top Articles',
-            url: '/top-articles'
+            title: 'Recent Articles',
+            url: '/recent-articles'
         },
         {
             title: 'Featured Articles',
@@ -33,13 +33,13 @@ const Footer = () => {
                 <div className='flex gap-10 lg:flex-row flex-col'>
                     <div className='lg:w-2/5 space-y-5 w-full'>
                         <p className='text-3xl  font-extrabold flex gap-2 items-center '>
-                            
+
                             ArticleAlley</p>
                         <p className='lg:text-justify'>
                             Welcome to ArticleAlley, a platform for reading and writing articles on various topics. Explore diverse content from technology to lifestyle, engage with authors, and contribute your own articles. Dive into knowledge and creativity with ArticleAlley.
                         </p>
                     </div>
-                    <div className='lg:w-1/4 w-full flex flex-col space-y-5 lg:text-center'>
+                    <div className='lg:w-1/4 w-full flex flex-col space-y-5 '>
                         <p className='text-xl font-bold'>Useful Links</p>
 
                         <ul className='space-y-2 '>
@@ -54,7 +54,7 @@ const Footer = () => {
                     <div className='lg:w-2/5 space-y-5 my-auto'>
                         <p className='font-bold text-xl text-center'>Subscribe to our newsletter</p>
                         <NewsLetterForm />
-                        <p className='text-neutral-200 text-sm'>Stay up-to-date with our latest articles and insights.</p>
+                        <p className='text-neutral-200 text-sm text-center'>Stay up-to-date with our latest articles and insights.</p>
                     </div>
                 </div>
             </div>

@@ -111,7 +111,7 @@ const SignInForm = () => {
                         )}
                     />
                 </div>
-                <Button className='w-full mt-6' type='submit'
+                <Button className='w-full mt-6 hover:bg-blue-500' type='submit'
                     disabled={loading}
                 >
                     {

@@ -20,7 +20,9 @@ export async function LoginButton() {
             <div>
                 <Link
                     href="/signin"
-                    className={`${buttonVariants({ variant: 'default' })}`}
+                    className={`${buttonVariants({ variant: 'default' })}
+                        hover:bg-blue-500
+                    `}
                 >
                     Sign In
                 </Link>

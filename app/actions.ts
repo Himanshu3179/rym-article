@@ -27,10 +27,6 @@ export async function getAllUsers() {
 
 export async function getUserDetails() {
   try {
-    if (cachedUserDetails) {
-      console.log("logging the cached data....");
-      return cachedUserDetails;
-    }
     const session = await getServerSession(NextAuthOptions);
     if (!session || !session.user) {
       return null;
@@ -55,7 +51,6 @@ export async function getUserDetails() {
     if (!user) {
       return null;
     }
-    cachedUserDetails = user;
     return user;
   } catch (error) {
     console.error(error);
@@ -218,6 +213,17 @@ export async function getRelatedArticles(articleId: string) {
       createdAt: "desc",
     },
     take: 5,
+  });
+}
+
+// get recent articles
+
+export async function getRecentArticles() {
+  return db.article.findMany({
+    orderBy: {
+      createdAt: "desc",
+    },
+    take: 7,
   });
 }
 

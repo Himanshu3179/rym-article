@@ -28,15 +28,15 @@ const Featured = async () => {
   return (
     <div className='w-full flex flex-col gap-5'>
       <div>
-        <div className='h-1 bg-black w-full' />
+        {/* <div className='h-1 bg-black w-full' /> */}
         <h1
           className={`text-xl ${titleFont.className} underline flex items-center my-2 gap-1`}
         >
-          <Star size={24} strokeWidth={1} fill='gold' />
+          {/* <Star size={24} strokeWidth={1} fill='gold' /> */}
           Featured Articles
           <ChevronRight />
         </h1>
-        <div className='h-[1px] bg-black w-full ' />
+        {/* <div className='h-[1px] bg-black w-full ' /> */}
       </div>
       <Link className='w-full lg:h-96 bg-[#29303C] text-white rounded-md flex  justify-between lg:gap-10
         shadow-sm hover:opacity-[0.98]

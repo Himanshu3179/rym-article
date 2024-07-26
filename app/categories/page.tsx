@@ -9,7 +9,7 @@ const page = async (
             page?: string;
         };
     }
-) => {    
+) => {
     const currentPage = Number(searchParams?.page) || 1;
     const data = await getAllArticles(currentPage);
     const articles = data.articles;

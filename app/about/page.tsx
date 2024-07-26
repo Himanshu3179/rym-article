@@ -1,8 +1,109 @@
+import { buttonVariants } from '@/components/ui/button'
+import { ChevronsRight } from 'lucide-react'
+import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 const page = () => {
   return (
-    <div>page</div>
+    <div className='  flex flex-col gap-'>
+      <div className='lg:px-20 px-5 py-10 flex lg:flex-row flex-col lg:gap-20 items-center 
+        gap-10
+      '>
+        <div className='lg:w-2/3 flex flex-col lg:gap-10 gap-5'>
+          <p className='text-5xl font-bold'>
+            Welcome to ArticleAlley
+          </p>
+          <p className='text-xl text-muted-foreground'>
+            Explore diverse content from technology to lifestyle, engage with authors, and contribute your own articles. Dive into knowledge and creativity with ArticleAlley.
+          </p>
+        </div>
+        <div className='lg:w-1/3'>
+          <Image
+            src={'/image.png'}
+            alt='image'
+            height={500}
+            width={400}
+            className='rounded-lg'
+          />
+        </div>
+      </div>
+
+      {/* Our Focus Areas*/}
+
+      <div className="flex lg:flex-row flex-col 
+      lg:px-20 px-5 py-10 bg-white/60
+      gap-10 items-center
+      ">
+        <div className='lg:w-1/2 flex flex-col gap-10'>
+          <p className='text-4xl font-bold'>
+            Our Focus Areas
+          </p>
+          <p className='text-xl text-muted-foreground'>
+            ArticleAlley covers a wide range of topics, from technology and business to personal development and lifestyle. We&apos;re passionate about sharing insights and practical advice to help our readers grow and succeed.
+          </p>
+        </div>
+
+        <div className='lg:w-1/2 flex flex-col gap-5'>
+          <div className='flex flex-col gap-1'>
+            <p className='text-2xl font-bold'>
+              Technology
+            </p>
+            <p className='text-lg text-muted-foreground'>
+              Stay up-to-date with the latest trends and innovations in the tech industry.
+            </p>
+          </div>
+
+          <div className='flex flex-col gap-1'>
+            <p className='text-2xl font-bold'>
+              Business
+            </p>
+            <p className='text-lg text-muted-foreground'>
+              Discover strategies and insights to help your business thrive.
+            </p>
+          </div>
+
+          <div className='flex flex-col gap-1'>
+            <p className='text-2xl font-bold'>
+              Personal Growth
+            </p>
+            <p className='text-lg text-muted-foreground'>
+              Explore topics that can help you unlock your full potential.
+            </p>
+          </div>
+
+          <div className='flex flex-col gap-1'>
+            <p className='text-2xl font-bold'>
+              Lifestyle
+            </p>
+            <p className='text-lg text-muted-foreground'>
+              Get inspired by articles on health, wellness, and more.
+            </p>
+
+          </div>
+        </div>
+      </div>
+
+
+      {/* Explore ArticleAlley */}
+      <div className='lg:px-20 px-5 py-10 flex flex-col gap-10 items-center '>
+        <p className='text-4xl font-bold text-center'>
+          Explore ArticleAlley
+        </p>
+        <p className='text-lg text-muted-foreground text-center'>
+          ArticleAlley is a treasure trove of insights and inspiration.
+          <br />
+          Browse through our latest articles and discover content that resonates with you.
+        </p>
+
+        <Link href='/'
+          className={`${buttonVariants({ variant: 'default' })}`}
+        >
+          Explore Articles <ChevronsRight />
+        </Link>
+
+      </div>
+    </div>
   )
 }
 

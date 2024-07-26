@@ -9,18 +9,29 @@ const NewsLetterForm = () => {
     const { toast } = useToast();
     const router = useRouter();
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-        toast({
-            title: 'Subscribed',
-            description: 'You have successfully subscribed to our newsletter'
-        })
-        router.push('/')
+        e.preventDefault()
+        // if email is empty
+        const emailInput = e.currentTarget[0] as HTMLInputElement;
+        if (!emailInput.value) {
+            return toast({
+                title: 'Error',
+                description: 'Email is required',
+            })
+        }
+        else {
+            toast({
+                title: 'Success',
+                description: 'Subscribed successfully',
+            })
+            router.push('/')
+        }
     }
     return (
         <form className='flex gap-2'
             onSubmit={handleSubmit}
         >
             <Input placeholder='Enter your email' className='text-black' type='email' />
-            <Button>Subscribe</Button>
+            <Button className='hover:bg-red-500'>Subscribe</Button>
         </form>
     )
 }

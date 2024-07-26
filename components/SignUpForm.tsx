@@ -83,9 +83,7 @@ const SignUpForm = () => {
                             <FormItem>
                                 <FormLabel>name</FormLabel>
                                 <FormControl>
-                                    <Input placeholder='johndoe' {...field}
-                                        
-                                    />
+                                    <Input placeholder='johndoe' {...field} />
                                 </FormControl>
                                 <FormMessage />
                             </FormItem>
@@ -134,7 +132,7 @@ const SignUpForm = () => {
                                     <Input
                                         placeholder='Re-Enter your password'
                                         type='password'
-                                        
+
                                         {...field}
                                     />
                                 </FormControl>
@@ -143,7 +141,7 @@ const SignUpForm = () => {
                         )}
                     />
                 </div>
-                <Button className='w-full mt-6' type='submit'
+                <Button className='w-full mt-6  hover:bg-blue-500' type='submit'
                     disabled={form.formState.isSubmitting}
                 >
                     Sign up
